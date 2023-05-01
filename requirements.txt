@@ -2,4 +2,5 @@ numpy
 pandas 
 Flask
 matplotlib
+ipykernel
 -e .
