@@ -13,9 +13,9 @@ from src.components.data_transformation import DataTransformation
 
 @dataclass 
 class DataIngestionconfig:
-    train_data_path:str = os.path.join('artifcats' , 'train.csv') ## artifcats is floder name
-    test_data_path : str = os.path.join('artifcats','test.csv')
-    raw_data_path : str = os.path.join('artifcats','raw.csv')
+    train_data_path:str = os.path.join('artifacts' , 'train.csv') ## artifcats is floder name
+    test_data_path : str = os.path.join('artifacts','test.csv')
+    raw_data_path : str = os.path.join('artifacts','raw.csv')
 
 ## create a class for data ingestion
 class DataIngestion :
@@ -49,8 +49,3 @@ class DataIngestion :
         
 ## run data Ingestion
 
-if __name__ == '__main__':
-    obj = DataIngestion()
-    train_data_path , test_data_path = obj.initiate_data_ingestion()
-    data_transformation = DataTransformation()
-    train_arr , test_arr , _ = data_transformation.initiate_data_transformation(train_data_path , test_data_path)
